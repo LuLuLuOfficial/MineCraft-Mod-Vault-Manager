@@ -1,0 +1,21 @@
+----------------------------------------------------------------------------------------------------
+.__   __.  __    __   __    __   __   __          __       __    __    ______     ___           _______.
+|  \ |  | |  |  |  | |  |  |  | |  | |  |        |  |     |  |  |  |  /      |   /   \         /       |
+|   \|  | |  |  |  | |  |__|  | |  | |  |        |  |     |  |  |  | |  ,----'  /  ^  \       |   (----`
+|  . `  | |  |  |  | |   __   | |  | |  |        |  |     |  |  |  | |  |      /  /_\  \       \   \    
+|  |\   | |  `--'  | |  |  |  | |  | |  `----.   |  `----.|  `--'  | |  `----./  _____  \  .----)   |   
+|__| \__|  \______/  |__|  |__| |__| |_______|   |_______| \______/   \______/__/     \__\ |_______/    
+                                                                                                        
+----------------------------------------------------------------------------------------------------
+Log File Created At 2025-03-11 18-04-10
+
+
+
+
+2025-03-11 18-04-10 |-| [Level: <Normal> | Module: <PyLucas.Class.LogManager>]: Deleted Oldest LogFile -> Data\Log\2025-03-11 17-31-00.txt.
+2025-03-11 18-04-10 |-| [Level: <Normal> | Module: <Data.Lib.BackEnd.Class.INET_Switcher>]: Setting Requests To Force <IPV6> Usage.
+2025-03-11 18-04-10 |-| [Level: <Normal> | Module: <__main__>]: <Project Initialize> Project Initialize Succeeded.
+2025-03-11 18-04-10 |-| [Level: <Normal> | Module: <__main__>]: <Project Modify> Added History Projects.
+2025-03-11 18-04-11 |-| [Level: <Warn> | Module: <__main__>]: <Project Modify> Project Mods_Location Duplicate.[Project_ID: [Existing->Test_02, Creating->None] - Attribute: [Key->Mods_Location, Value->Test\Mods_03]]-[Addition->()].
+2025-03-11 18-04-11 |-| [Level: <Normal> | Module: <__main__>]: <Project Modify> Retraction to Previous History.
+2025-03-11 18-04-11 |-| [Level: <Normal> | Module: <__main__>]: <Project Modify> Project Modify Succeeded -> Test_02.

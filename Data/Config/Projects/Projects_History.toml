@@ -1,0 +1,65 @@
+[[History]]
+
+[History.Test_01]
+Project_Name = "测试_01"
+Game_Version = "1.19.1"
+Mods_Loader = "fabric"
+Mods_Location = "Test\\Mods_01"
+Date_Created = "2025-03-12 10-47-50"
+
+[[History]]
+
+[History.Test_01]
+Project_Name = "测试_01"
+Game_Version = "1.19.1"
+Mods_Loader = "fabric"
+Mods_Location = "Test\\Mods_01"
+Date_Created = "2025-03-12 10-47-50"
+
+[History.Test_02]
+Project_Name = "测试_02"
+Game_Version = "1.20.1"
+Mods_Loader = "fabric"
+Mods_Location = "Test\\Mods_02"
+Date_Created = "2025-03-12 10-47-53"
+
+[[History]]
+
+[History.Test_01]
+Project_Name = "测试_01"
+Game_Version = "1.19.1"
+Mods_Loader = "fabric"
+Mods_Location = "Test\\Mods_01"
+Date_Created = "2025-03-12 10-47-50"
+
+[History.Test_02]
+Project_Name = "测试_02_改"
+Game_Version = "1.20.2"
+Mods_Loader = "forge"
+Mods_Location = "Test\\Mods_03"
+Date_Created = "2025-03-12 10-47-53"
+
+[[History]]
+
+[History.Test_01]
+Project_Name = "测试_01"
+Game_Version = "1.19.1"
+Mods_Loader = "fabric"
+Mods_Location = "Test\\Mods_01"
+Date_Created = "2025-03-12 10-47-50"
+
+[History.Test_02]
+Project_Name = "测试_02"
+Game_Version = "1.20.1"
+Mods_Loader = "fabric"
+Mods_Location = "Test\\Mods_03"
+Date_Created = "2025-03-12 10-47-53"
+
+[[History]]
+
+[History.Test_02]
+Project_Name = "测试_02"
+Game_Version = "1.20.1"
+Mods_Loader = "fabric"
+Mods_Location = "Test\\Mods_03"
+Date_Created = "2025-03-12 10-47-53"

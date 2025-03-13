@@ -1,0 +1,55 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.List_Container_L1 {
+  display: flex; /* 使用 flexbox 使列表并排 */
+  gap: 20px;
+  width: 100%; /* 让容器占满整个页面宽度 */
+}
+
+.List_Container_L2 {
+  width: 50%; /* 每个列表容器宽度为 50% */
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  width: 100%; /* 列表宽度为100% */
+}
+
+li {
+  padding: 8px;
+  background-color: #f4f4f4;
+  margin: 5px 0;
+  cursor: pointer; /* 鼠标悬停时显示为可点击 */
+}
+
+li.selected {
+  background-color: #4caf50; /* 选中时的背景颜色 */
+  color: white; /* 选中时的文字颜色 */
+}
+
+.ProjectsManager_Button {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+select {
+  padding: 8px;
+  font-size: 16px;
+}

@@ -1,0 +1,46 @@
+{
+    "Mods": {
+        "carpet": {
+            "ModName": "carpet",
+            "Groups": [],
+            "Downloaded": 1,
+            "DownLoadURL": "https://cdn.modrinth.com/data/TQTTVgYE/versions/M2G5yWMw/fabric-carpet-1.18.1-1.4.57%2Bv220119.jar",
+            "version_type": "release",
+            "hashes": {
+                "sha1": "4e6bcf231b53147bd8b32784090e3e615063b8b1",
+                "sha512": "14e885f71ee8e82de3a6864fed7027383be66991fd165abb1869bae67695cf2cd102732e46fa74d07444aca9e273b81ea333854a7f2ceac0747888cc108d5d38"
+            },
+            "filename": "fabric-carpet-1.18.1-1.4.57+v220119.jar.Disabled"
+        },
+        "fabric-api": {
+            "ModName": "fabric-api",
+            "Groups": [],
+            "Downloaded": 1,
+            "DownLoadURL": "https://cdn.modrinth.com/data/P7dR8mSH/versions/0.46.6%2B1.18/fabric-api-0.46.6%2B1.18.jar",
+            "version_type": "release",
+            "hashes": {
+                "sha512": "3124e71b7791e69bb17a8c1c09b6838c28398fe082b074717b333e783daa49795fc8a8afea8e1758c2749a1e27f01975c4000ebf29dbdd3cfcf64817f12256e2",
+                "sha1": "c73a64983ee850cda3b98e6bff9831fa6e9260b6"
+            },
+            "filename": "fabric-api-0.46.6+1.18.jar"
+        }
+    },
+    "Groups": {
+        "Disabled": {
+            "GroupName": "禁用",
+            "ModsList": [
+                "carpet"
+            ]
+        },
+        "Group_01": {
+            "GroupName": "组_01",
+            "ModsList": [
+                "fabric-api"
+            ]
+        },
+        "Group_02": {
+            "GroupName": "Group_02",
+            "ModsList": []
+        }
+    }
+}

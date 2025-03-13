@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project - {{Project_ID}}</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='CSS/styles.css') }}"
+    />
+  </head>
+  <body>
+    <h1>Project - {{Project_ID}}</h1>
+
+    <h2>Mods Manage</h2>
+    <div class="ProjectsManager_Button">
+      <button onclick="">添加模组</button>
+      <button onclick="">移除模组</button>
+      <button onclick="">下载模组</button>
+      <button onclick="">删除模组</button>
+      <button onclick="">更新模组</button>
+      <button onclick="">启用模组</button>
+      <button onclick="">禁用模组</button>
+    </div>
+
+    <h2>Groups Manage</h2>
+    <div class="ProjectsManager_Button">
+      <button onclick="">添加群组</button>
+      <button onclick="">删除群组</button>
+      <button onclick="">添加模组</button>
+      <button onclick="">移除模组</button>
+    </div>
+
+    <h2>Mods Archives</h2>
+    <div class="List_Container_L1">
+      <div class="List_Container_L2">
+        <div class="List_Container_L1">
+          <h3>Mods</h3>
+          <button onclick="">全选</button>
+          <button onclick="">取消全选</button>
+        </div>
+        <ul id="List__Mods_Name">
+          <!-- <li>Mod Example</li> -->
+        </ul>
+      </div>
+      <div class="List_Container_L2">
+        <h3>Groups</h3>
+        <ul id="List__Groups_Name">
+          <!-- <li>Group Example</li> -->
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      window.onload = function () {
+        var ulMods = document.getElementById("List__Mods_Name");
+        var ulGroups = document.getElementById("List__Groups_Name");
+
+        // 加载 Mods 列表
+        fetch(
+          "http://127.0.0.1:5000/API/Project/{{Project_ID}}/ModsArchive/ID&Name"
+        )
+          .then((response) => response.json())
+          .then((data) => {
+            Object.entries(data).forEach(([Project_ID, Project_Name]) => {
+              var li = document.createElement("li");
+              li.textContent = Project_Name;
+              li.setAttribute("Project_ID", Project_ID);
+              li.onclick = function () {
+                var allItems = ulMods.getElementsByTagName("li");
+                for (var item of allItems) {
+                  item.classList.remove("selected");
+                }
+                this.classList.add("selected");
+              };
+              ulMods.appendChild(li);
+            });
+          })
+          .catch((error) => {
+            console.error("请求数据失败:", error);
+          });
+
+        // 加载 Groups 列表（假设也有类似的 API）
+        fetch(
+          "http://127.0.0.1:5000/API/Project/{{Project_ID}}/GroupsArchive/ID&Name"
+        )
+          .then((response) => response.json())
+          .then((data) => {
+            Object.entries(data).forEach(([Group_ID, Group_Name]) => {
+              var li = document.createElement("li");
+              li.textContent = Group_Name;
+              li.setAttribute("Group_ID", Group_ID);
+              li.onclick = function () {
+                var allItems = ulGroups.getElementsByTagName("li");
+                for (var item of allItems) {
+                  item.classList.remove("selected");
+                }
+                this.classList.add("selected");
+              };
+              ulGroups.appendChild(li);
+            });
+          })
+          .catch((error) => {
+            console.error("请求数据失败:", error);
+          });
+      };
+    </script>
+  </body>
+</html>

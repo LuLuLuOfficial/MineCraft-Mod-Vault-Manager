@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects Manager</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      li {
+        padding: 8px;
+        background-color: #f4f4f4;
+        margin: 5px 0;
+        cursor: pointer; /* 鼠标悬停时显示为可点击 */
+      }
+      li.selected {
+        background-color: #4caf50; /* 选中时的背景颜色 */
+        color: white; /* 选中时的文字颜色 */
+      }
+      .button-container {
+        display: flex;
+        gap: 10px;
+      }
+      button {
+        padding: 10px 20px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      button:hover {
+        background-color: #45a049;
+      }
+      select {
+        padding: 8px;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Projects Manager</h1>
+
+    <div class="ProjectsManager_Button">
+      <button onclick="OpenProject()">打开项目</button>
+      <button onclick="">添加项目</button>
+      <button onclick="">编辑项目</button>
+      <button onclick="">删除项目</button>
+      <button onclick="">撤销操作</button>
+    </div>
+
+    <h2>Projects List</h2>
+    <ul id="List__Project_Name">
+      <!-- <li>Project Example</li> -->
+    </ul>
+
+    <script>
+      // 页面加载时自动向指定地址请求数据
+      window.onload = function () {
+        var ul = document.getElementById("List__Project_Name");
+        fetch("http://127.0.0.1:5000/API/Projects/ID&Name")
+          .then((response) => response.json())
+          .then((data) => {
+            Object.entries(data).forEach(([Project_ID, Project_Name]) => {
+              var li = document.createElement("li");
+              li.textContent = Project_Name;
+              li.setAttribute("Project_ID", Project_ID);
+              li.onclick = function () {
+                var allItems = ul.getElementsByTagName("li");
+                for (var item of allItems) {
+                  item.classList.remove("selected");
+                }
+                this.classList.add("selected");
+              };
+              ul.appendChild(li);
+            });
+          })
+          .catch((error) => {
+            console.error("请求数据失败:", error);
+          });
+      };
+
+      function OpenProject() {
+        var ul = document.getElementById("List__Project_Name");
+        console.log(ul);
+        var selectedItem = ul.querySelector("li.selected"); // 获取选中的 li
+        if (selectedItem) {
+          var Project_ID = selectedItem.getAttribute("Project_ID");
+          var URL =
+            "http://127.0.0.1:5000/ProjectsManager/" +
+            Project_ID +
+            "/ModsManager";
+          console.log(URL);
+          window.location.href = URL;
+        } else {
+          alert("请先选择一个项目!");
+        }
+      }
+    </script>
+  </body>
+</html>

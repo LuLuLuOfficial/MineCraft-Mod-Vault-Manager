@@ -1,0 +1,31 @@
+----------------------------------------------------------------------------------------------------
+.__   __.  __    __   __    __   __   __          __       __    __    ______     ___           _______.
+|  \ |  | |  |  |  | |  |  |  | |  | |  |        |  |     |  |  |  |  /      |   /   \         /       |
+|   \|  | |  |  |  | |  |__|  | |  | |  |        |  |     |  |  |  | |  ,----'  /  ^  \       |   (----`
+|  . `  | |  |  |  | |   __   | |  | |  |        |  |     |  |  |  | |  |      /  /_\  \       \   \    
+|  |\   | |  `--'  | |  |  |  | |  | |  `----.   |  `----.|  `--'  | |  `----./  _____  \  .----)   |   
+|__| \__|  \______/  |__|  |__| |__| |_______|   |_______| \______/   \______/__/     \__\ |_______/    
+                                                                                                        
+----------------------------------------------------------------------------------------------------
+Log File Created At 2025-03-12 10-41-58
+
+
+
+
+2025-03-12 10-41-58 |-| [Level: <Normal> | Module: <PyLucas.Class.LogManager>]: Deleted Oldest LogFile -> Data\Log\2025-03-11 17-33-10.txt.
+2025-03-12 10-41-59 |-| [Level: <Normal> | Module: <Data.Lib.BackEnd.Class.INET_Switcher>]: Setting Requests To Force <IPV6> Usage.
+2025-03-12 10-41-59 |-| [Level: <Normal> | Module: <__main__>]: <Project Initialize> Project Initialize Succeeded.
+2025-03-12 10-41-59 |-| [Level: <Normal> | Module: <__main__>]: <Project Create> Added History Projects.
+2025-03-12 10-42-04 |-| [Level: <Normal> | Module: <__main__>]: <Project Create> Project Create Succeeded -> Test_01.
+2025-03-12 10-42-05 |-| [Level: <Normal> | Module: <__main__>]: <Project UnDo> Project Undo Operation Succeeded.
+2025-03-12 10-42-05 |-| [Level: <Normal> | Module: <__main__>]: <Project ReDo> Project ReDo Operation Succeeded.
+2025-03-12 10-42-06 |-| [Level: <Normal> | Module: <__main__>]: <Project Create> Added History Projects.
+2025-03-12 10-42-07 |-| [Level: <Normal> | Module: <__main__>]: <Project Create> Project Create Succeeded -> Test_02.
+2025-03-12 10-42-07 |-| [Level: <Normal> | Module: <__main__>]: <Project Modify> Added History Projects.
+2025-03-12 10-42-08 |-| [Level: <Normal> | Module: <__main__>]: <Project Modify> Project Modify Succeeded -> Test_02.
+2025-03-12 10-42-09 |-| [Level: <Normal> | Module: <__main__>]: <Project Modify> Added History Projects.
+2025-03-12 10-42-10 |-| [Level: <Normal> | Module: <__main__>]: <Project Modify> Project Modify Succeeded -> Test_02.
+2025-03-12 10-42-10 |-| [Level: <Normal> | Module: <__main__>]: <Project Delete> Added History Projects.
+2025-03-12 10-42-10 |-| [Level: <Normal> | Module: <__main__>]: <Project Delete> Project Delete Succeeded -> Test_01.
+2025-03-12 10-42-11 |-| [Level: <Normal> | Module: <__main__>]: <Project Delete> Added History Projects.
+2025-03-12 10-42-11 |-| [Level: <Normal> | Module: <__main__>]: <Project Delete> Project Delete Succeeded -> Test_02.

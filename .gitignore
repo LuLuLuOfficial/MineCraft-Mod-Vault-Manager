@@ -1,0 +1,10 @@
+.venv/
+Backup
+.VSCodeCounter/
+dist/
+*.egg-info/
+
+__pycache__/
+
+
+

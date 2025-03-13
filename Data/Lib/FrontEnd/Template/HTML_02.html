@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>简单JS网页</title>
+    <script>
+      function displayInfo() {
+        // 获取文本框内容
+        var textBoxValue = document.getElementById("myTextBox").value;
+        // 获取下拉列表选中的值
+        var dropDownValue = document.getElementById("myDropDown").value;
+        // 显示信息
+        alert(
+          "文本框内容: " + textBoxValue + "\n选中的下拉列表项: " + dropDownValue
+        );
+      }
+
+      function sendGetRequest() {
+        // 指定发送请求的 URL，这里假设 Flask 后端运行在 localhost:5000
+        var url = "https://jsonplaceholder.typicode.com/posts"; // Flask 后端的根路由地址
+
+        // 发送 GET 请求
+        fetch(url)
+          .then((response) => response.text()) // 解析响应为文本
+          .then((data) => {
+            alert("GET 请求成功！\n返回的数据: " + data); // 显示返回的文本
+          })
+          .catch((error) => {
+            alert("请求失败: " + error); // 错误处理
+          });
+      }
+    </script>
+  </head>
+  <body>
+    <h1>简单的网页</h1>
+
+    <!-- 文本框 -->
+    <label for="myTextBox">请输入内容：</label>
+    <input type="text" id="myTextBox" placeholder="输入文本" />
+    <br /><br />
+
+    <!-- 下拉列表 -->
+    <label for="myDropDown">选择一个选项：</label>
+    <select id="myDropDown">
+      <option value="option1">选项 1</option>
+      <option value="option2">选项 2</option>
+      <option value="option3">选项 3</option>
+    </select>
+    <br /><br />
+
+    <!-- 显示信息按钮 -->
+    <button onclick="displayInfo()">显示信息</button>
+    <br /><br />
+
+    <!-- 发送GET请求按钮 -->
+    <button onclick="sendGetRequest()">发送 GET 请求</button>
+  </body>
+</html>

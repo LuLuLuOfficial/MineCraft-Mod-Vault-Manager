@@ -1,0 +1,82 @@
+{
+  "Example - Projects": {
+    // 范例 -> Projects.json
+    "Test_01": {
+      "Project_Name": "",
+      "Game_Version": "",
+      "Mods_Loader": "",
+      "Mods_Location": "",
+      "Date_Created": "",
+      "Date_Modified": "",
+    },
+  },
+
+  "NEW - Projects": {
+    // 新建 -> Projects.json
+  },
+
+  "Example - Mods_Archives": {
+    // 范例 -> Mods_Archives.json
+    "Mods": {
+      "ModID_01": {
+        "Platform": "",
+        "ModName": "模组_01",
+        "Groups": [],
+        "Downloaded": 0,
+        "DownLoadURL": "",
+        "version_type": "",
+        "hashes": {
+          "sha512": "",
+          "sha1": "",
+        },
+        "filename": "",
+      },
+    },
+    "Groups": {
+      "Disabled": {
+        "GroupName": "禁用",
+        "ModsList": [],
+      },
+      "Group_01": {
+        "GroupName": "组_01",
+        "ModsList": [],
+      },
+    },
+  },
+
+  "NEW - Mods_Archives": {
+    // 新建 -> Mods_Archives.json
+    "Mods": {},
+    "Groups": {
+      "Disabled": {
+        "GroupName": "禁用",
+        "ModsList": [],
+      },
+    },
+  },
+
+  "NEW - Mods_Archives -> Mods": {
+    // 新建 -> Mods_Archives.json -> "Mods"
+    "ModID": {
+      "Platform": "",
+      "ModName": "",
+      "Groups": [],
+      "Downloaded": 1,
+      "DownLoadURL": "",
+      "version_type": "",
+      "hashes": {
+        "sha1": "",
+        "sha512": "",
+      },
+      "filename": "",
+    },
+  },
+
+  "NEW - Mods_Archives -> Groups": {
+    // 新建 -> Mods_Archives.json -> "Groups"
+    "Disabled": {
+      "GroupName": "禁用",
+      "ModsList": [],
+    },
+  },
+}
