@@ -1,0 +1,28 @@
+----------------------------------------------------------------------------------------------------
+.__   __.  __    __   __    __   __   __          __       __    __    ______     ___           _______.
+|  \ |  | |  |  |  | |  |  |  | |  | |  |        |  |     |  |  |  |  /      |   /   \         /       |
+|   \|  | |  |  |  | |  |__|  | |  | |  |        |  |     |  |  |  | |  ,----'  /  ^  \       |   (----`
+|  . `  | |  |  |  | |   __   | |  | |  |        |  |     |  |  |  | |  |      /  /_\  \       \   \    
+|  |\   | |  `--'  | |  |  |  | |  | |  `----.   |  `----.|  `--'  | |  `----./  _____  \  .----)   |   
+|__| \__|  \______/  |__|  |__| |__| |_______|   |_______| \______/   \______/__/     \__\ |_______/    
+                                                                                                        
+----------------------------------------------------------------------------------------------------
+Log File Created At 2025-03-30 22-53-28
+
+
+
+
+2025-03-30 22-53-28 |-| [Level: <Normal> | Module: <PyLucas.Class.LogManager>]: Deleted Oldest LogFile -> Data\Log\2025-03-30 22-39-34.txt.
+2025-03-30 22-53-28 |-| [Level: <Normal> | Module: <Data.src.BackEnd.Class.INET_Switcher>]: Setting Requests To Force <IPV6> Usage.
+2025-03-30 22-53-28 |-| [Level: <Normal> | Module: <Data.src.BackEnd.Class.Manager_Projects>]: <Project Initialize> Project Initialize Succeeded.
+2025-03-30 22-53-28 |-| [Level: <Normal> | Module: <Data.src.BackEnd.Class.Manager_Projects>]: <Project Create> Added History Projects.
+2025-03-30 22-53-31 |-| [Level: <Normal> | Module: <Data.src.BackEnd.Class.Manager_Projects>]: <Project Create> Project Create Succeeded -> Test_01.
+2025-03-30 22-53-31 |-| [Level: <Normal> | Module: <Data.src.BackEnd.Class.Manager_Projects>]: <Project Create> Added History Projects.
+2025-03-30 22-53-33 |-| [Level: <Normal> | Module: <Data.src.BackEnd.Class.Manager_Projects>]: <Project Create> Project Create Succeeded -> Test_02.
+2025-03-30 22-53-35 |-| [Level: <Normal> | Module: <Data.src.BackEnd.Class.Manager_Projects>]: <Project Delete> Added History Projects.
+2025-03-30 22-53-35 |-| [Level: <Normal> | Module: <Data.src.BackEnd.Class.Manager_Projects>]: <Project Delete> Project Delete Succeeded -> Test_01.
+2025-03-30 22-53-37 |-| [Level: <Normal> | Module: <Data.src.BackEnd.Class.Manager_ModsArchives>]: <Mod Search> Mod Search Succeeded -> Carpet in Modrinth.
+2025-03-30 22-53-41 |-| [Level: <Normal> | Module: <Data.src.BackEnd.Class.Manager_ModsArchives>]: <Mod Addition> Mod Addition Succeeded -> carpet.
+2025-03-30 22-53-42 |-| [Level: <Normal> | Module: <Data.src.BackEnd.Class.Manager_ModsArchives>]: <Mod Remove> Mod Remove Succeeded.
+2025-03-30 22-53-42 |-| [Level: <Normal> | Module: <Data.src.BackEnd.Class.Manager_Projects>]: <Project Delete> Added History Projects.
+2025-03-30 22-53-42 |-| [Level: <Normal> | Module: <Data.src.BackEnd.Class.Manager_Projects>]: <Project Delete> Project Delete Succeeded -> Test_02.

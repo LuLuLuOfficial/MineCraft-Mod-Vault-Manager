@@ -1,8 +1,6 @@
 .venv/
-Backup
 .VSCodeCounter/
-dist/
-*.egg-info/
+Backup
 
 __pycache__/
 

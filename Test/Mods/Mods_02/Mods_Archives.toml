@@ -1,0 +1,5 @@
+[Mods]
+
+[Groups.Disabled]
+GroupName = "禁用"
+ModsList = []
