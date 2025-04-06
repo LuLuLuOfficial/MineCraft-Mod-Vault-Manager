@@ -340,6 +340,10 @@ class __Mod__():
         self.LogManage: LogManager = LogManage
         self.__MAM__: __ModsArchivesManager__ = __MAM__
 
+    @property
+    def Mods_Archive(self) -> dict:
+        return self.__MAM__.Mods_Archives.Get_Value(Key_Locate='Mods')
+
     def Search(self, Mod_Name: str, Platform: str, **kwargs):
         '''
         Mod_Name: str = {Mod Name}
@@ -472,7 +476,11 @@ class __Group__():
 
         self.LogManage: LogManager = LogManage
         self.__MAM__: __ModsArchivesManager__ = __MAM__
-
+    
+    @property
+    def Groups_Archive(self) -> dict:
+        return self.__MAM__.Mods_Archives.Get_Value(Key_Locate='Groups')
+    
     def Create(self, Group_ID: str):
         try:
             self.__MAM__.Group_Create(Group_ID=Group_ID)
@@ -482,6 +490,7 @@ class __Group__():
                     self.LogManage.LogOutput(Level='Warn', LogMessage=f'<Group Create> {E}')
                 case _:
                     self.LogManage.LogOutput(Level='Error', LogMessage=f'<Group Create> Unexpected Error -> {E}')
+            return False
         else:
             self.LogManage.LogOutput(Level='Normal', LogMessage=f'<Group Create> Group Create Succeeded')
             return True
@@ -563,7 +572,7 @@ class ModsManager():
         self.__MAM__: __ModsArchivesManager__ = __ModsArchivesManager__(Project_ID=Project_ID, Project_Info=Project_Info)
         
         self.Mod: __Mod__ = __Mod__(__MAM__=self.__MAM__)
-        self.Group: __Mod__ = __Mod__(__MAM__=self.__MAM__)
+        self.Group: __Group__ = __Group__(__MAM__=self.__MAM__)
 
 if __name__ == '__main__':
     pass

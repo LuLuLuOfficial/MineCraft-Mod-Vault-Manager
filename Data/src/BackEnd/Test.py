@@ -57,6 +57,17 @@ ModsManage.Mod.Disable(Mode=0, Mods_ID='carpet')
 
 Time_Sleep(1)
 
+ModsManage.Group.Create(Group_ID='Carpets')
+
+Time_Sleep(1)
+
+ModsManage.Group.Addition(Group_ID='Carpets', Mods_ID='carpet')
+
+for Mod_ID in ModsManage.Mod.Mods_Archive.keys():
+    print(f"\Mod ID: {Project_ID} -> Mod Name: {ProjectManage.Projects.Get_Value(f'{Project_ID}.Project_Name')}")
+
+Time_Sleep(1)
+
 print(f'Now, Trying to Update All Mods in the Project -> [Project ID: Test_01]')
 ModsManage.Mod.UpDate(Mods_ID='__ALL__')
 
