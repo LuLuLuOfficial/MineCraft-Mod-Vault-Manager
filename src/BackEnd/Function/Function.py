@@ -24,7 +24,7 @@ def HashFile(Path_File: str, HashMode: str) -> str:
 def Download(Path_Folder: str, File_Name: str, Download_URL: str, Hashes: dict = {}):
     from requests import get, Response
     from os import rename
-    from Data.src.BackEnd.Class.LucasException import BadConnection, FileDownloadFailed
+    from src.BackEnd.Class.LucasException import BadConnection, FileDownloadFailed
 
     Path_File = rf'{Path_Folder}\{File_Name}.Download'
     

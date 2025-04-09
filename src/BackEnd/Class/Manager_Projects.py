@@ -3,7 +3,7 @@
 class __ProjectsManager__():
     '''Not Include Error Handling Module.'''
     def __init__(self):
-        from Data.src.BackEnd.Instance import LogManager, LogManage
+        from src.Instance import LogManager, LogManage
         from PyLucas import ConfigEditor
         self.LogManage: LogManager = LogManage
 
@@ -35,8 +35,8 @@ class __ProjectsManager__():
         for Check in Mode:
             match Check:
                 case 'Project_ID':  # 检查 项目名称
-                    from Data.src.BackEnd.Function.Function import CheckValid_str
-                    from Data.src.BackEnd.Class.LucasException import StringFormatError, DuplicateObject
+                    from src.BackEnd.Function.Function import CheckValid_str
+                    from src.BackEnd.Class.LucasException import StringFormatError, DuplicateObject
 
                     if not CheckValid_str(String=Project_ID, Format=r'[A-Za-z0-9_]+'):
                         raise StringFormatError(Message='Project_ID not fit the format.',
@@ -49,7 +49,7 @@ class __ProjectsManager__():
                                                   Attribute=['Project_ID', Project_ID])
                         
                 case 'Mods_Location':   # 检查 管理路径
-                    from Data.src.BackEnd.Class.LucasException import DuplicateObject
+                    from src.BackEnd.Class.LucasException import DuplicateObject
 
                     for Project_ID_Existing in self.Projects.Get_Keys():
                         if Mods_Location == self.Projects.Get_Value(Key_Locate=f'{Project_ID_Existing}.Mods_Location'):
@@ -58,8 +58,8 @@ class __ProjectsManager__():
                                                   Attribute=['Mods_Location', Mods_Location])
                         
                 case 'BasicMsg':    # 检查 MOD加载器|游戏版本
-                    from Data.src.BackEnd.Class.LucasException import UnSupportLoader, UnSupportVersion
-                    from Data.src.BackEnd.API.API_Modrinth import Check_GameVersion, Check_ModeLoader
+                    from src.BackEnd.Class.LucasException import UnSupportLoader, UnSupportVersion
+                    from src.BackEnd.API.API_Modrinth import Check_GameVersion, Check_ModeLoader
 
                     try:
                         Checked_GameVersion: bool = Check_GameVersion(BasicMsg[0])
@@ -153,7 +153,7 @@ class __ProjectsManager__():
         Mods_Location: str = r'Mods_Location'\n
         BasicMsg: tuple[str] = ('1.20.1', 'Fabric')\n
         '''
-        from Data.src.BackEnd.Class.LucasException import NonExistentObject
+        from src.BackEnd.Class.LucasException import NonExistentObject
 
         if not Project_ID in self.Projects.Get_Keys():
             raise NonExistentObject(Message='The Requested Project Not Exist.',
@@ -170,7 +170,7 @@ class __ProjectsManager__():
             self.Projects.Set_Value(Key_Locate=f'{Project_ID}.Mods_Location', Value=Mods_Location)
 
     def Delete(self, Project_ID: str):
-        from Data.src.BackEnd.Class.LucasException import NonExistentObject
+        from src.BackEnd.Class.LucasException import NonExistentObject
 
         if not Project_ID in self.Projects.Get_Keys():
             raise NonExistentObject(Message='The Requested Project Not Exist.',
@@ -181,7 +181,7 @@ class __ProjectsManager__():
 class ProjectsManager():
     '''SuperStructure'''
     def __init__(self):
-        from Data.src.BackEnd.Instance import LogManager, LogManage
+        from src.Instance import LogManager, LogManage
 
         self.LogManage: LogManager = LogManage
         self.__ProjectManage: __ProjectsManager__ = None
@@ -327,7 +327,7 @@ class ProjectsManager():
 if __name__ == '__main__':
     from time import sleep
 
-    from Data.src.BackEnd.Instance import INET_Switch
+    from src.Instance import INET_Switch
     
     INET_Switch.Switch(Target= 'IPV4')
     ProjectManage: ProjectsManager = ProjectsManager()

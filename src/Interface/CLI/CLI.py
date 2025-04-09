@@ -4,7 +4,6 @@
           命令行界面
 ------------------------------
 '''
-from Data.Lib.PyLucas.Instance import LogManage
 
 class CLI():
     def __init__(self):

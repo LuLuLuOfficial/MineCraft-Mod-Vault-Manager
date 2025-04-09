@@ -1,5 +1,5 @@
 from requests import get, Response
-from Data.src.BackEnd.Class.LucasException import BadConnection, UnFixedKnownBug, NonExistentModVersion
+from src.BackEnd.Class.LucasException import BadConnection, UnFixedKnownBug, NonExistentModVersion
 
 def Check_APIAlive(URL: str = 'https://staging-api.modrinth.com/') -> int:
     '''API存活检测'''
@@ -173,7 +173,7 @@ def Mod_Locate(Mod_ID: str, Project_Info: dict, Cribble: bool = False) -> dict:
         return Mod_Archive
 
 if __name__ == '__main__':
-    from Data.src.BackEnd.Instance import INET_Switch
+    from src.Instance import INET_Switch
     INET_Switch.Switch(Target= 'IPV4')
     import pprint
     # print(Check_APIAlive())

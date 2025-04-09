@@ -4,7 +4,7 @@ def Compel_IPV6(): return AF_INET6
 
 class INET_Switcher():
     def __init__(self):
-        from Data.src.BackEnd.Instance import LogManager, LogManage
+        from src.Instance import LogManager, LogManage
         self.__Switch: bool = False
         self.LogManage: LogManager = LogManage
 

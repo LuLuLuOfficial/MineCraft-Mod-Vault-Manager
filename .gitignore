@@ -1,8 +1,7 @@
 .venv/
 .VSCodeCounter/
-Backup
-
 __pycache__/
 
-
+Backup/
+Test1/
 

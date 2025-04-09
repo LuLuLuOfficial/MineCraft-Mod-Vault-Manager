@@ -48,7 +48,7 @@ class __ModsArchivesManager__():
         ID: str = {Mod_ID} | {Group_ID}\n
         RaiseBy: str = 'Exist' | 'NotExist' -> Raise Error When {RaiseBy}\n
         '''
-        from Data.src.BackEnd.Class.LucasException import NonExistentObject, DuplicateObject
+        from src.BackEnd.Class.LucasException import NonExistentObject, DuplicateObject
 
         match Mode:
             case 'Mod': IDs: tuple[str] = self.Mods_Archives.Get_Keys('Mods')
@@ -75,7 +75,7 @@ class __ModsArchivesManager__():
 
         match Platform:
             case 'Modrinth':
-                from Data.src.BackEnd.API.API_Modrinth import Mod_Search
+                from src.BackEnd.API.API_Modrinth import Mod_Search
 
                 if not kwargs:
                     kwargs = {"query": '',
@@ -86,16 +86,16 @@ class __ModsArchivesManager__():
                     
                 return Mod_Search(Mod_Name=Mod_Name, Project_Info=self.Project_Info, Params=kwargs)
             case 'CurseForge':
-                # from Data.src.BackEnd.API.API_CurseForge import Mod_Search
+                # from src.BackEnd.API.API_CurseForge import Mod_Search
                 return [], {}
             case _:
-                from Data.src.BackEnd.Class.LucasException import UnSupportedPlatform
+                from src.BackEnd.Class.LucasException import UnSupportedPlatform
                 raise UnSupportedPlatform(Platform=Platform)
 
     def Mod_Addition(self, Mod_ID: str, Platform: str):
         match Platform:
             case 'Modrinth':
-                from Data.src.BackEnd.API.API_Modrinth import Mod_Locate
+                from src.BackEnd.API.API_Modrinth import Mod_Locate
 
                 # self.Backup()
                 self.ExistCheck(Mode='Mod', ID=Mod_ID, RaiseBy='Exist')
@@ -105,16 +105,16 @@ class __ModsArchivesManager__():
                 self.Mod_DownLoad(Mod_Archive)
 
             case 'CurseForge':
-                # from Data.src.BackEnd.API.API_CurseForge import Mod_Locate
+                # from src.BackEnd.API.API_CurseForge import Mod_Locate
                 pass
             case _:
-                from Data.src.BackEnd.Class.LucasException import UnSupportedPlatform
+                from src.BackEnd.Class.LucasException import UnSupportedPlatform
                 raise UnSupportedPlatform(Platform=Platform)
 
     def Mod_DownLoad(self, Mods_Archive: list[dict] | tuple[dict] | dict, DownloadOnly: bool = False):
         '''这个函数不会被用户直接的调用 仅仅作为其他函数的一部分被调用 帮助其他函数实现功能'''
-        from Data.src.BackEnd.Class.LucasException import FileDownloadFailed
-        from Data.src.BackEnd.Function.Function import Download
+        from src.BackEnd.Class.LucasException import FileDownloadFailed
+        from src.BackEnd.Function.Function import Download
 
         if type(Mods_Archive) == dict: Mods_Archive: tuple = (Mods_Archive,)
         for Mod_Archive in Mods_Archive:
@@ -167,7 +167,7 @@ class __ModsArchivesManager__():
     def Mod_Update(self, Mods_ID: tuple[str]) -> list:
         from os import remove, rename
         from os.path import exists
-        from Data.src.BackEnd.API.API_Modrinth import Mod_Locate
+        from src.BackEnd.API.API_Modrinth import Mod_Locate
 
         if Mods_ID == ('__ALL__',): Mods_ID = self.Mods_Archives.Get_Keys('Mods')
         Update_Failed: list = []
@@ -216,8 +216,8 @@ class __ModsArchivesManager__():
         return Update_Failed
 
     def Group_Create(self, Group_ID: str):
-        from Data.src.BackEnd.Function.Function import CheckValid_str
-        from Data.src.BackEnd.Class.LucasException import StringFormatError
+        from src.BackEnd.Function.Function import CheckValid_str
+        from src.BackEnd.Class.LucasException import StringFormatError
 
         if Group_ID.upper() == 'DISABLED': Group_ID = 'Disabled'
         self.ExistCheck(Mode='Group', ID=Group_ID, RaiseBy='Exist')
@@ -231,7 +231,7 @@ class __ModsArchivesManager__():
                                             "ModsList": []})
 
     def Group_Delete(self, Group_ID: str):
-        from Data.src.BackEnd.Class.LucasException import ProtectedObject
+        from src.BackEnd.Class.LucasException import ProtectedObject
 
         self.ExistCheck(Mode='Group', ID=Group_ID, RaiseBy='Exist')
         if Group_ID.upper() == 'DISABLED': raise ProtectedObject(Message='Target Group was Protected, Cannot be Deleted.',
@@ -335,7 +335,7 @@ class __ModsArchivesManager__():
 
 class __Mod__():
     def __init__(self, __MAM__: __ModsArchivesManager__):
-        from Data.src.BackEnd.Instance import LogManager, LogManage
+        from src.Instance import LogManager, LogManage
 
         self.LogManage: LogManager = LogManage
         self.__MAM__: __ModsArchivesManager__ = __MAM__
@@ -472,7 +472,7 @@ class __Mod__():
 
 class __Group__():
     def __init__(self, __MAM__: __ModsArchivesManager__):
-        from Data.src.BackEnd.Instance import LogManager, LogManage
+        from src.Instance import LogManager, LogManage
 
         self.LogManage: LogManager = LogManage
         self.__MAM__: __ModsArchivesManager__ = __MAM__
